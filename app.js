@@ -8,13 +8,22 @@ const http = require('http');
 
 const app = express();
 
-app.get('/',function (req,res) {
-    res.status(200);
-    res.send('Hello World')
-})
+
 
 //Cria o servidor HTTP
-const httpServer = new http.Server(app)
+const httpServer = new http.Server()
+
+const wss = new WebSocket.Server({ server: httpServer });
+
+
+wss.on('connection',function (client) {
+    
+    client.on('message',function (msg) {
+        console.log(msg)
+    })
+
+})
+
 
 httpServer.listen(process.env.PORT,function (params) {
     console.log('Servidor rondando em: http://localhost:'+process.env.PORT);
