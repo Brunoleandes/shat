@@ -15,11 +15,17 @@ const httpServer = new http.Server()
 
 const wss = new WebSocket.Server({ server: httpServer });
 
+function broadcast(msg) {
+    wss.clients.forEach( client =>{
+        client.send(msg)
+    })
+}
 
 wss.on('connection',function (client) {
+    broadcast("Novo usuario na sala.");
     
     client.on('message',function (msg) {
-        console.log(msg)
+        broadcast(msg)
     })
 
 })
