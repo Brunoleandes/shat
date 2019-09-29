@@ -1,0 +1,28 @@
+{
+  "name": "shat",
+  "version": "1.0.0",
+  "description": "Chat sobre websocket",
+  "main": "app.js",
+  "dependencies": {
+    "ws": "^7.1.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Brunoleandes/shat.git"
+  },
+  "keywords": [
+    "javascript",
+    "websocket",
+    "nodejs"
+  ],
+  "author": "Bruno Maria Wesley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Brunoleandes/shat/issues"
+  },
+  "homepage": "https://github.com/Brunoleandes/shat#readme"
+}
