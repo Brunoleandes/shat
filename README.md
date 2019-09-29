@@ -1,0 +1,1 @@
+Renomear .env-ex para .env e configurar as variáveis.
